@@ -1,4 +1,6 @@
-data = ["Andrey", 12, True, 2342.001, 10 > 9]
+list_data = ["Andrey", 12, True, 2342.001, 10 > 9]
 
-for index in data:
-    print(type(index))
+print(list_data)
+
+for element in list_data:
+    print(type(element))
