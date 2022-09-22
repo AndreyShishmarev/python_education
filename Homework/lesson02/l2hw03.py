@@ -10,3 +10,18 @@ elif month == month_list[8] or month == month_list[9] or month == month_list[10]
     print('Осень')
 else:
     print('Не существует такого месяца')
+
+month_dict = {"Январь": 1, "Февраль": 2, "Март": 3, "Апрель": 4, "Май": 5, "Июнь": 6, "Июль": 7, "Август": 8,
+              "Сентябрь": 9,
+              "Октябрь": 10, "Ноябрь": 11, "Декабрь": 12}
+month_number = int(input('Введите номер месяца: '))
+if month_number == month_dict.get('Январь') or month_number == month_dict.get('Февраль') or month_number == month_dict.get("Декабрь"):
+    print('Зима')
+elif month_number == month_dict.get('Май') or month_number == month_dict.get("Март") or month_number == month_dict.get("Апрель"):
+    print('Весна')
+elif month_number == month_dict.get("Июнь") or month_number == month_dict.get("Июль") or month_number == month_dict.get("Август"):
+    print('Лето')
+elif month_number == month_dict.get("Сентябрь") or month_number == month_dict.get("Октябрь") or month_number == month_dict.get("Ноябрь"):
+    print('Осень')
+else:
+    print('Такого месяца не существует!')
