@@ -1,8 +1,11 @@
-string = input("Введите слова: ")
-word = string.split()
-str_number = 0
+# 4.	Пользователь вводит строку из нескольких слов, разделённых пробелами.
+# Вывести каждое слово с новой строки. Строки нужно пронумеровать.
+# Если слово длинное, выводить только первые 10 букв в слове.
 
-for i in range(len(string)):
-    str_number += 1
-    new_word = word.index(i)
-    print(str_number, new_word[:10])
+string = input("Введите слова: ").split()
+element = 0
+
+while len(string) != element:
+    string2 = string[element]
+    print("Строка №", element + 1, string2[:10])
+    element += 1
