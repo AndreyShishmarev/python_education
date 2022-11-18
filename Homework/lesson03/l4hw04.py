@@ -14,11 +14,18 @@ print(my_func())
 
 
 def my_func2(x=int(input("Введите число: ")), y=int(input("Введите степень: "))):
-    result = 1
-    while y != 0:
-        result *= x
-        y -= 1
-    return result
+    if y > 0:
+        result = 1
+        while y != 0:
+            result *= x
+            y -= 1
+        return result
+    elif y < 0:
+        result = 1
+        while y != 0:
+            result /= x
+            y += 1
+        return result
 
 
 print(my_func2())
