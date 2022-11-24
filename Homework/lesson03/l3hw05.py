@@ -6,10 +6,22 @@
 # Если специальный символ введён после нескольких чисел,
 # то вначале нужно добавить сумму этих чисел к полученной ранее сумме и после этого завершить программу.
 
-def sum_my_string(my_string=map(int, input("Введите числа через пробел ").split())):
-    return sum(my_string)
+def sum_my_string(x=map(int, input("Введите числа через пробел ").split())):
+    return sum(x)
 
 
-while input(sum_my_string()) != "`":
-    sum_my_string()
-print(sum_my_string())
+s = sum_my_string()
+
+print(s)
+
+string = input("Введите числа через пробел ")
+4
+while string != "`":
+    # s += 1
+    i = map(int, string.split())
+    s = s + sum_my_string(i)
+    print(s)
+    string = input("Введите числа через пробел ")
+    if string == "'":
+        break
+
