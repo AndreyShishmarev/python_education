@@ -2,7 +2,6 @@
 # но с прописной первой буквой. Например, print(int_func(‘text’)) -> Text.
 
 def int_func(string):
-    string.split()
     return string.capitalize()
 
 
