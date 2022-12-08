@@ -4,5 +4,11 @@
 # Используйте написанную ранее функцию int_func().
 
 def int_func(string):
-    string.split()
-    return string.capitalize()
+    result_string = []
+    for word in string:
+        result_string.append(word.capitalize())
+    return " ".join(result_string)
+
+
+input_string = input("Введите слова через пробел ").split()
+print(int_func(input_string))
