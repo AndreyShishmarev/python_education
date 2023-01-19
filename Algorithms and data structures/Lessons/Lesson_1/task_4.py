@@ -8,4 +8,4 @@ if m < b:
 if m < c:
     m = c
 
-print(f'Максимум = ')
+print(f'Максимум = {m}')
