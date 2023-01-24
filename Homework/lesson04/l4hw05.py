@@ -3,5 +3,8 @@
 # Нужно получить результат вычисления произведения всех элементов списка.
 # Подсказка: использовать функцию reduce().
 from functools import reduce
-# source_list = [i for i in range(100, 1002) if i % 2 == 0]
-print(reduce(lambda i: i for i in range(100, 1002) if i % 2 == 0))
+
+source_list = [i for i in range(100, 1002) if i % 2 == 0]
+print(source_list)
+
+print(reduce(lambda x, y: x * y, source_list))
