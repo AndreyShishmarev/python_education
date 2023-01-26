@@ -5,12 +5,13 @@
 # В цикле нужно выводить только первые n чисел, начиная с 1! и до n!.
 # Подсказка: факториал числа n — произведение чисел от 1 до n.
 # Например, факториал четырёх 4! = 1 * 2 * 3 * 4 = 24.
-def generator(fact=(1, 2, 3, 4)):
-    for el in fact:
-        yield el
+def fact(n):
+    factorial = 1
+    while n > 1:
+        factorial *= n
+        n -= 1
+        yield factorial
 
 
-for element in generator():
-    print(element)
-#
-# print(factorial(4))
+for el in fact(9):
+    print(el)
