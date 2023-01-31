@@ -1,0 +1,10 @@
+Ivanov 100000
+Petrov 75000
+Sidorov 70000
+Ivanchenko 15000
+Petrovchenko 30000
+Sidorovchenko 25500
+Hismatullin 11005
+Seredkina 90700
+Abyazov 13335
+Baliberdin 10800
