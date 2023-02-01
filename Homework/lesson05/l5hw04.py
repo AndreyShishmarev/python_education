@@ -8,12 +8,19 @@
 # Новый блок строк должен записываться в новый текстовый файл.
 source_file = open('l5hw04_source.txt', 'r')
 result_file = open('l5hw04_result.txt', 'w')
+
 translate_dict = {'One': 'Один', 'Two': 'Два', 'Three': 'Три', 'Four': 'Четыре'}
+
 for data in source_file.readlines():
     string = data.split(' - ')
     en_word = string[0]
     ru_word = translate_dict.get(string[0])
-    print(f"{ru_word} - {string[1]}")
-    print(f"{ru_word} - {string[1]}", file=result_file)
+    result_file.writelines(f"{ru_word} - {string[1]}")
+
 source_file.close()
+
+result_file = open('l5hw04_result.txt', 'r')
+
+print(result_file.read())
+
 result_file.close()
