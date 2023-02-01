@@ -7,11 +7,18 @@
 # Петров 13749.32
 my_file = open('l5hw03.txt', 'r')
 
+my_list = []
+my_sum = 0
+count = 0
+
 for data in my_file.readlines():
-    list_values = int(data.split()[1])
-    # average = sum(list_values) / len(data.split()[1])
-    print(list_values)
-    # lastname, salary = data.split()
-    # if int(salary) < 20000:
-    #     print(data)
-    my_file.close()
+    lastname, salary = data.split()
+    if int(salary) < 20000:
+        # print(data)
+        my_list.append(lastname)
+        my_sum += int(data.split()[1])
+        count += 1
+average = my_sum / count
+print(f"Сотрудники: ", my_list)
+print(f"Средняя ЗП: ", average)
+my_file.close()
