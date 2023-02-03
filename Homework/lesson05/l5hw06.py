@@ -8,12 +8,15 @@
 #                                         Физкультура:   —   30(пр)   —
 # Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 my_file = open(r'l5hw06.txt', encoding='utf-8')
+
 my_dict = {}
 my_list = []
+
 for data in my_file.readlines():
     my_list.append(data.split(":"))
     my_dict.update(my_list)
 
 # print(my_list)
 print(my_dict.items())
-# print(my_file.read())
+
+my_file.close()
