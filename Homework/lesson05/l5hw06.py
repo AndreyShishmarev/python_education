@@ -7,16 +7,16 @@
 #                                         Физика:   30(л)   —   10(лаб)
 #                                         Физкультура:   —   30(пр)   —
 # Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
-my_file = open(r'l5hw06.txt', encoding='utf-8')
 
 my_dict = {}
-my_list = []
+with open(r'l5hw06.txt', encoding='utf-8') as source_file:
+    for string in source_file:
+        line = string.split()
+        subject = line[0].split(':')[0]
+        my_dict[subject] = line[1:]
+# print(my_dict)
 
-for data in my_file.readlines():
-    my_list.append(data.split(":"))
-    my_dict.update(my_list)
-
-# print(my_list)
-print(my_dict.items())
-
-my_file.close()
+result_dict = {}
+for key, value in my_dict.items():
+    result_dict[key] = sum([int(item.split('(')[0]) for item in value if item.split('(')[0].isdigit()])
+print(result_dict)
