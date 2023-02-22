@@ -11,5 +11,25 @@
 #
 # Задачу можно усложнить, реализовав проверку порядка режимов. При его нарушении выводить соответствующее сообщение и завершать скрипт.
 
+import time
+
+
 class TrafficLight:
-    pass
+    __color = ["Red", "Yellow", "Green"]
+
+    def running(self):
+        for el in self.__color:
+            print(time.ctime(time.time()))
+            if el == "Red":
+                print(el)
+                time.sleep(7)
+            if el == "Yellow":
+                print(el)
+                time.sleep(2)
+            if el == "Green":
+                print(el)
+                time.sleep(5)
+        print(time.ctime(time.time()))
+
+t = TrafficLight()
+t.running()
