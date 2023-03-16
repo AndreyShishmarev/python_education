@@ -8,7 +8,22 @@
 # толщиной в 1 см*число см толщины полотна;
 # ●	проверить работу метода.
 #
-# Например: 20 м*5000 м*25 кг*5 см = 12500 т.
+# Например: 20м*5000м*25кг*5см = 12500 т.
 
 class Road:
-    pass
+    _length = int
+    _width = int
+    _thickness = 0.5
+    _weight = 25
+
+    def __init__(self, lenght, width):
+        self._length = lenght
+        self._width = width
+
+    def calculation(self):
+        calculation = self._length * self._width * self._weight * self._thickness / 1000
+        print(f'Необходимо {calculation} тонны асфальта для покрытия всей дороги')
+
+
+village_road = Road(20, 5000)
+village_road.calculation()
