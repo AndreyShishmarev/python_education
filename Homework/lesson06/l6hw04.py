@@ -9,6 +9,9 @@
 #
 # Создайте экземпляры классов, передайте значения атрибутов. Выполните доступ к атрибутам, выведите результат.
 # Вызовите методы и покажите результат.
+from turtle import left
+
+
 class Car:
     speed = int
     color = str
@@ -16,35 +19,75 @@ class Car:
     is_police = bool
 
     def go(self):
-        pass
+        print("Машина поехала!")
 
     def stop(self):
-        pass
+        print("Машина остановилась!")
 
-    def turn(direction):
-        pass
+    # def turn(left):
+    #     print("Машина повернула на лево")
+    #
+    # def turn(right):
+    #     print("Машина повернула на право")
+
+    def turn(self, direction):
+        print("Машина повернула на " + direction)
 
     def show_speed(self):
-        pass
+        print(self.speed, "км\ч")
 
 
 class TownCar(Car):
-    pass
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
 
     def show_speed(self):
-        pass
+        print(self.speed, "км\ч")
+        if self.speed > 60:
+            print("Превышение скорости!!!")
 
 
 class SportCar(Car):
-    pass
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
 
 
 class WorkCar(Car):
-    pass
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
 
     def show_speed(self):
-        pass
+        print(self.speed, "км\ч")
+        if self.speed > 40:
+            print("Превышение скорости!!!")
 
 
 class PoliceCar(Car):
-    pass
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+
+
+town_car = TownCar(65, "Green", "Mazda", False)
+town_car.go()
+town_car.turn("Лево")
+town_car.show_speed()
+town_car.stop()
+
+police_car = PoliceCar(80, "Black", "Ford", True)
+police_car.go()
+police_car.turn("Право")
+police_car.show_speed()
+police_car.stop()
+
