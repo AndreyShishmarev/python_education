@@ -10,12 +10,10 @@
 # передать данные, проверить значения атрибутов, вызвать методы экземпляров.
 
 class Worker:
-    wage = int
-    bonus = int
     name = str
     surname = str
     position = str
-    _income = {"wage": wage, "bonus": bonus}
+    _income = {"wage": int, "bonus": int}
 
 
 class Position(Worker):
@@ -27,7 +25,7 @@ class Position(Worker):
         self._income["bonus"] = bonus
 
     def get_full_name(self):
-        print(self.name, self.surname, self.position)
+        print(self.name, self.surname, "-", self.position)
 
     def get_total_income(self):
         print(self._income["wage"] + self._income["bonus"])
