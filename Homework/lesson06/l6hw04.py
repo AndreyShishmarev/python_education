@@ -9,8 +9,6 @@
 #
 # Создайте экземпляры классов, передайте значения атрибутов. Выполните доступ к атрибутам, выведите результат.
 # Вызовите методы и покажите результат.
-from turtle import left
-
 
 class Car:
     speed = int
@@ -31,7 +29,7 @@ class Car:
     #     print("Машина повернула на право")
 
     def turn(self, direction):
-        print("Машина повернула на " + direction)
+        print("Машина повернула в " + direction)
 
     def show_speed(self):
         print(self.speed, "км\ч")
@@ -84,6 +82,18 @@ town_car.go()
 town_car.turn("Лево")
 town_car.show_speed()
 town_car.stop()
+
+sport_car = SportCar(200, "Red", "Ferrari", False)
+town_car.go()
+town_car.turn("Лево")
+town_car.show_speed()
+town_car.stop()
+
+work_car=WorkCar(40, "White", "Ford", False)
+work_car.go()
+work_car.turn("Право")
+work_car.show_speed()
+work_car.stop()
 
 police_car = PoliceCar(80, "Black", "Ford", True)
 police_car.go()
