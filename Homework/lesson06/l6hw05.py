@@ -13,24 +13,24 @@ class Stationary:
 
 
 class Pen(Stationary):
-    title = "Ручка"
+    title = "Ручкой"
 
     def draw(self):
-        print("Отрисовка ручкой!")
+        print(f"Отрисовка {self.title}!")
 
 
 class Pencil(Stationary):
-    title = "Карандаш"
+    title = "Карандашом"
 
     def draw(self):
-        print("Отрисовка карандашом!")
+        print(f"Отрисовка {self.title}!")
 
 
 class Handle(Stationary):
-    title = "Маркер"
+    title = "Маркером"
 
     def draw(self):
-        print("Отрисовка маркером!")
+        print(f"Отрисовка {self.title}!")
 
 
 stationary = Stationary()
@@ -38,14 +38,10 @@ pen = Pen()
 pencil = Pencil()
 handle = Handle()
 
-print(stationary.title)
 stationary.draw()
 
-print(pen.title)
 pen.draw()
 
-print(pencil.title)
 pencil.draw()
 
-print(handle.title)
 handle.draw()
