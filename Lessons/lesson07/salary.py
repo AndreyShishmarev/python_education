@@ -15,7 +15,13 @@ class Salary:
             return self.amount < other.amount
 
     def __gt__(self, other):
-        return self.amount > other.amount
+        if isinstance(other, int) or isinstance(other, float):
+            return self.amount > other
+        else:
+            return self.amount > other.amount
+
+    def __eq__(self, other: 'Salary'):
+        return self.amount == other.amount and self.vat == other.vat and self.multiply == other.multiply
 
 
 junior = Salary(200)
@@ -24,4 +30,5 @@ senior = Salary(1000)
 
 print(junior < middle)
 print(middle > junior)
-print(junior < 400)
+print(junior < 100)
+print(junior == senior)
