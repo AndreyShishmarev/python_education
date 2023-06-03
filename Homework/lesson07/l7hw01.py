@@ -16,6 +16,6 @@ class Matrix:
 
 mtx1 = Matrix([[11, 22], [33, 44], [55, 66]])
 mtx2 = Matrix([[12, 23], [34, 45], [56, 67]])
-mtx = mtx1 + mtx2
+# mtx = mtx1 + mtx2
 # print(mtx.matrix_list)
 # print(mtx)
